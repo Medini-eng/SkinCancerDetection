@@ -15,8 +15,8 @@ if not firebase_admin._apps:
     import os
     firebase_json = os.getenv("FIREBASE_CREDENTIALS")  # Read from environment variable
     if firebase_json:
-    cred = credentials.Certificate(json.loads(firebase_json))
-    firebase_admin.initialize_app(cred)
+        cred = credentials.Certificate(json.loads(firebase_json))
+        firebase_admin.initialize_app(cred)
 
     #firebase_admin.initialize_app(cred)
 
