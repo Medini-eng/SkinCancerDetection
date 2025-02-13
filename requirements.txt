@@ -2,8 +2,8 @@ streamlit
 ultralytics
 torch
 torchvision
-#opencv-python-headless
-opencv-python
+opencv-python-headless
+#opencv-python
 pillow
 numpy
 firebase-admin
