@@ -10,15 +10,15 @@ from firebase_admin import credentials, firestore
 
 # Check if Firebase is already initialized
 if not firebase_admin._apps:
-    #cred = credentials.Certificate("dreamalink-819c7-firebase-adminsdk-fbsvc-566077b5b3.json")  # Ensure the file path is correct
-    import json
-    import os
-    firebase_json = os.getenv("FIREBASE_CREDENTIALS")  # Read from environment variable
-    if firebase_json:
-        cred = credentials.Certificate(json.loads(firebase_json))
-        firebase_admin.initialize_app(cred)
+    cred = credentials.Certificate("dreamalink-819c7-firebase-adminsdk-fbsvc-566077b5b3.json")  # Ensure the file path is correct
+    # import json
+    # import os
+    # firebase_json = os.getenv("FIREBASE_CREDENTIALS")  # Read from environment variable
+    # if firebase_json:
+    #     cred = credentials.Certificate(json.loads(firebase_json))
+    #     firebase_admin.initialize_app(cred)
 
-    #firebase_admin.initialize_app(cred)
+    firebase_admin.initialize_app(cred)
 
 # Initialize Firestore
 db = firestore.client()
