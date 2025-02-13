@@ -20,7 +20,7 @@ db = firestore.client()
 # Load YOLOv8 model
 @st.cache_resource
 def load_model():
-    return YOLO("best1.pt")  # Ensure best.pt is in the same directory
+    return YOLO("best.pt")  # Ensure best.pt is in the same directory
 
 model = load_model()
 
